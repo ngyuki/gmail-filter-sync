@@ -20,6 +20,7 @@ jobs:
           persist-credentials: false
 
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        id: setup-go
         with:
           go-version-file: go.mod
 
@@ -28,7 +29,7 @@ jobs:
 
       - uses: golang/govulncheck-action@032d45514ae346b1db93c04b0c90b841c370344f # v1.1.0
         with:
-          go-version-file: go.mod
+          go-version-input: ${{ steps.setup-go.outputs.go-version }}
           repo-checkout: false
 
       - uses: dominikh/staticcheck-action@9716614d4101e79b4340dd97b10e54d68234e431 # v1.4.1
