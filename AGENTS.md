@@ -7,6 +7,10 @@
 - If `editorconfig-checker` flags the leading whitespace in such a raw string literal, place `editorconfig-checker-disable` and `editorconfig-checker-enable` comments immediately before and after the block. Keep the exclusion limited to that block
 - Format Go files with `gofmt`
 
+## Commit Messages
+
+- Write commit messages in English
+
 ## README and CLI Documentation
 
 - Keep command examples, arguments, and environment variable descriptions in the README and usage text consistent with the implementation and tests. Evaluate examples such as Jsonnet and compare their output with any output shown in the documentation
